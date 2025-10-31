@@ -1,0 +1,18 @@
+---
+alwaysApply: true
+---
+
+## General Rules
+
+* The design system we have created is called Playbook, which has many sub-brand libraries within it
+
+## Coding Methods and Patterns
+
+* Follow the coding methods and patterns used in `/src/components` directory with TypeScript component, CSS module, and Storybook story
+  * Place files at `/src/components/[name of component]`
+  * Use the same file naming convention and folder organization
+  * If this component contains subcomponents/nested components, please check to see if they exist and leverage those before creating a custom element or new component
+
+## Tokens
+
+* Only add a token variable to a css file if you see the exact token name in the figma component, don't make them up yourself

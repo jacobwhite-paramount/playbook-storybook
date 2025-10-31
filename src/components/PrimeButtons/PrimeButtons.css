@@ -1,0 +1,243 @@
+/* PrimeButtons Component Styles */
+
+/* CSS Custom Properties (Tokens) - These should map to CBDS tokens */
+.prime-button {
+  --button-primary-background: #004ace;
+  --button-primary-border: #004ace;
+  --button-primary-text: #ffffff;
+  --button-primary-background-hover: #00259e;
+  --button-primary-border-hover: #00259e;
+  --button-primary-text-hover: #ffffff;
+
+  --button-secondary-background: #e8e8e8;
+  --button-secondary-border: #e8e8e8;
+  --button-secondary-text: #181818;
+  --button-secondary-background-hover: #dcdcdc;
+  --button-secondary-border-hover: #dcdcdc;
+  --button-secondary-text-hover: #181818;
+
+  --button-tertiary-background: #ffffff;
+  --button-tertiary-border: #c8c8c8;
+  --button-tertiary-text: #181818;
+  --button-tertiary-background-hover: #f5f8ff;
+  --button-tertiary-border-hover: #004ace;
+  --button-tertiary-text-hover: #181818;
+
+  --button-disabled-background: #dcdcdc;
+  --button-disabled-border: #dcdcdc;
+  --button-disabled-text: #ababab;
+
+  --button-loading-background: #dcdcdc;
+  --button-loading-border: #dcdcdc;
+
+  /* Border radius tokens from Figma */
+  --border-radius-8: 8px;
+  --border-radius-12: 12px;
+  --button-border-radius: var(--border-radius-8);
+
+  /* Base styles */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 1px solid;
+  border-radius: var(--button-border-radius);
+  font-family: 'FS_Industrie', 'FS Industrie Medium', sans-serif;
+  font-weight: 500;
+  text-align: center;
+  white-space: pre;
+  line-height: 1;
+}
+
+/* Size variants */
+.prime-button--large {
+  height: 48px;
+  font-size: 16px;
+  --button-border-radius: var(--border-radius-12);
+}
+
+.prime-button--medium {
+  height: 32px;
+  font-size: 14px;
+}
+
+.prime-button--small {
+  height: 28px;
+  font-size: 12px;
+}
+
+/* Primary style */
+.prime-button--primary.prime-button--default {
+  background-color: var(--button-primary-background);
+  border-color: var(--button-primary-border);
+  color: var(--button-primary-text);
+}
+
+.prime-button--primary.prime-button--hover {
+  background-color: var(--button-primary-background-hover);
+  border-color: var(--button-primary-border-hover);
+  color: var(--button-primary-text-hover);
+  cursor: pointer;
+}
+
+.prime-button--primary.prime-button--focused {
+  background-color: var(--button-primary-background);
+  border-color: var(--button-primary-border);
+  color: var(--button-primary-text);
+  /* Remove flex display from outer wrapper for focused state - inner div handles layout */
+  display: block;
+  /* Focus ring using box-shadow */
+  box-shadow: 0 0 0 2px #1ea7fd;
+}
+
+.prime-button--primary.prime-button--focused .prime-button__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: inherit;
+}
+
+/* Secondary style */
+.prime-button--secondary.prime-button--default {
+  background-color: var(--button-secondary-background);
+  border-color: var(--button-secondary-border);
+  color: var(--button-secondary-text);
+}
+
+.prime-button--secondary.prime-button--hover {
+  background-color: var(--button-secondary-background-hover);
+  border-color: var(--button-secondary-border-hover);
+  color: var(--button-secondary-text-hover);
+  cursor: pointer;
+}
+
+.prime-button--secondary.prime-button--focused {
+  background-color: var(--button-secondary-background);
+  border-color: var(--button-secondary-border);
+  color: var(--button-secondary-text);
+  /* Remove flex display from outer wrapper for focused state - inner div handles layout */
+  display: block;
+  /* Focus ring using box-shadow */
+  box-shadow: 0 0 0 2px #1ea7fd;
+}
+
+.prime-button--secondary.prime-button--focused .prime-button__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: inherit;
+}
+
+/* Tertiary style */
+.prime-button--tertiary.prime-button--default {
+  background-color: var(--button-tertiary-background);
+  border-color: var(--button-tertiary-border);
+  color: var(--button-tertiary-text);
+}
+
+.prime-button--tertiary.prime-button--hover {
+  background-color: var(--button-tertiary-background-hover);
+  border-color: var(--button-tertiary-border-hover);
+  color: var(--button-tertiary-text-hover);
+  cursor: pointer;
+}
+
+.prime-button--tertiary.prime-button--focused {
+  background-color: var(--button-tertiary-background);
+  border-color: var(--button-tertiary-border);
+  color: var(--button-tertiary-text);
+  /* Remove flex display from outer wrapper for focused state - inner div handles layout */
+  display: block;
+  /* Focus ring using box-shadow */
+  box-shadow: 0 0 0 2px #1ea7fd;
+}
+
+.prime-button--tertiary.prime-button--focused .prime-button__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  border-radius: inherit;
+}
+
+/* Disabled state (applies to all styles) */
+.prime-button--disabled {
+  background-color: var(--button-disabled-background);
+  border-color: var(--button-disabled-border);
+  color: var(--button-disabled-text);
+  cursor: not-allowed;
+}
+
+/* Loading state (applies to all styles) */
+.prime-button--loading {
+  background-color: var(--button-loading-background);
+  border-color: var(--button-loading-border);
+}
+
+/* Text element */
+.prime-button__text {
+  position: relative;
+  flex-shrink: 0;
+}
+
+/* Underline text only in focused state */
+.prime-button--focused .prime-button__text {
+  text-decoration: underline;
+}
+
+/* Ensure text inherits color in focused state */
+.prime-button--focused .prime-button__inner {
+  color: inherit;
+}
+
+/* Icon spacing */
+.prime-button > *:first-child:not(.prime-button__text) {
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.prime-button > *:last-child:not(.prime-button__text) {
+  margin-left: 8px;
+  flex-shrink: 0;
+}
+
+/* Padding for buttons with content - but not for focused state (handled by inner div) */
+.prime-button:not(.prime-button--loading):not(.prime-button--focused) {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.prime-button--large:not(.prime-button--loading):not(.prime-button--focused) {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Padding for focused state inner div */
+.prime-button--focused .prime-button__inner {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.prime-button--large.prime-button--focused .prime-button__inner {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+/* Ensure proper content alignment */
+.prime-button:not(.prime-button--focused) {
+  gap: 8px;
+}
+
+/* Gap for focused state inner div */
+.prime-button--focused .prime-button__inner {
+  gap: 8px;
+}
+

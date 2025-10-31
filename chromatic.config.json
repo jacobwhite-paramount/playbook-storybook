@@ -1,0 +1,10 @@
+{
+  "exitZeroOnChanges": true,
+  "exitOnceUploaded": false,
+  "autoAcceptChanges": false,
+  "onlyChanged": false,
+  "zip": false,
+  "buildScriptName": "build-storybook",
+  "storybookBuildDir": "storybook-static"
+}
+
