@@ -22,7 +22,7 @@ export function getReferenceImagePath(
   const sizeLower = size.toLowerCase();
   const styleLower = style.toLowerCase();
   const stateLower = state.toLowerCase();
-  return `/prime_buttons_images/prime-button-${sizeLower}-${styleLower}-${stateLower}.png`;
+  return `/figma-design-images/prime-button/prime-button-${sizeLower}-${styleLower}-${stateLower}.png`;
 }
 
 /**

@@ -52,7 +52,7 @@
 /* Size variants */
 .prime-button--large {
   height: 48px;
-  font-size: 12px;
+  font-size: 16px;
   --button-border-radius: var(--border-radius-12);
 }
 
